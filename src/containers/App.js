@@ -5,9 +5,13 @@ import * as classNames from 'classnames/bind'
 import styles from './App.scss';
 
 import Header from '../components/Header/Header'
+import Footer from '../components/Footer/Footer';
 
 import Main from './Main/Main';
-import Footer from '../components/Footer/Footer';
+import About from './About/About';
+import Reservation from './Reservation/Reservation';
+import Inquiry from './Inquiry/Inquiry';
+import Mypage from './Mypage/Mypage';
 
 const cx = classNames.bind(styles)
 
@@ -18,6 +22,10 @@ class App extends React.Component {
         <Header/>
         <Switch>
           <Route path='/' exact component={Main}/>
+          <Route path='/about' exact component={About}/>
+          <Route path='/reservation' exact component={Reservation}/>
+          <Route path='/inquiry' exact component={Inquiry}/>
+          <Route path='/mypage' exact component={Mypage}/>
         </Switch>
         <Footer />
       </div>
