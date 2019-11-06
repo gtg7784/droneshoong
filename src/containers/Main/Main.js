@@ -3,7 +3,12 @@ import * as classNames from 'classnames/bind'
 
 import styles from './Main.scss'
 
-import i_box from '../../assets/box.svg'
+import illust_2 from 'assets/illust_2.svg'
+import mockup from 'assets/mockup.png'
+import playstore from 'assets/playstore.png'
+import appstore from 'assets/appstore.png'
+
+import i_box from 'assets/box.svg'
 
 const cx = classNames.bind(styles)
 
@@ -25,10 +30,25 @@ class Main extends React.Component{
               <input type="text" placeholder="운송장 번호를 입력하세요."/>
             </div>
           </div>
-          <div/>
+          <img src={illust_2} alt=""/>
         </div>
-        <div className={cx('backTransform')} />
-        <div className={cx('backWhite')}/>
+        <div>
+          <img src={mockup} alt="" className={cx('mockup')}/>
+          <div>
+            <h1>
+              ‘드론으로 슝’을 <br/>
+              앱으로도 만나보세요!
+            </h1>
+            <p>
+              쉽고 빠른 택배 예약부터 드론배송 서비스까지! <br/>
+              다양한 맞춤형 서비스를 받아보세요.
+            </p>
+            <div>
+              <img src={playstore} alt=""/>
+              <img src={appstore} alt=""/>
+            </div>
+          </div>
+        </div>
       </div>
     )
   }

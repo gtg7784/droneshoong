@@ -12,6 +12,7 @@ import About from './About/About';
 import Reservation from './Reservation/Reservation';
 import Inquiry from './Inquiry/Inquiry';
 import Mypage from './Mypage/Mypage';
+import Illsut from '../components/Illust/Illust';
 
 const cx = classNames.bind(styles)
 
@@ -28,6 +29,7 @@ class App extends React.Component {
           <Route path='/mypage' exact component={Mypage}/>
         </Switch>
         <Footer />
+        {window.location.pathname === '/' ? <Illsut/> : null}
       </div>
     )
   }

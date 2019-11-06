@@ -13,6 +13,7 @@ const cx = classNames.bind(styles)
 
 class Header extends React.Component{
   constructor(props){
+    super(props);
     this.state = {
       isLogin: false,
       isRegister: false
@@ -43,25 +44,22 @@ class Header extends React.Component{
         {isLogin ? <Login /> : null}
         {isRegister ? <Register /> : null}
         <header className={cx('header')}>
-          <Link>
+          <Link to='/'>
             <img src={logo} alt=""/>
           </Link>
           <div>
             <ul>
               <li>
-                <Link>서비스 소개</Link>
+                <Link to='/about'>서비스 소개</Link>
               </li>
               <li>
-                <Link>개인택배</Link>
+                <Link to='/reservation'>택배 예약</Link>
               </li>
               <li>
-                <Link>물품리스트</Link>
+                <Link to='/inquiry'>택배 조회</Link>
               </li>
               <li>
-                <Link>택배 추적 기능</Link>
-              </li>
-              <li>
-                <Link>회원정보</Link>
+                <Link to='/mypage'>회원정보</Link>
               </li>
             </ul>
             <div>

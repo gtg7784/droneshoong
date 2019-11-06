@@ -9,7 +9,7 @@ class Register extends React.Component{
   render(){
     return(
       <div className={cx('Register')}>
-
+        Register
       </div>
     )
   }

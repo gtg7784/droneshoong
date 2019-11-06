@@ -1,56 +1,44 @@
 @import '../../styles/colors';
-html{
-  background-color: $main;
-}
 
 .Main{
   width: 100%;
   height: 100%;
   min-height: 100%;
-  background-color: $main;
   overflow-x: hidden;
-  padding-bottom: 35px;
-
-  & > div{
-    z-index: 1;
-    &.backTransform{
-      margin: 0px !important;
-      left: -500px !important;
-      position: absolute !important;
-      transform: skew(12deg, -12deg) !important;
-      width: 3500px !important;
-      height: 1000px !important;
-      background-color: #fff !important;
-    }
-    &.backWhite{
-      top: 1300px;
-      margin: 0px !important;
-      position: absolute !important;
-      background-color: #fff !important;
-      height: 656px !important;
-      width: 100vw !important;
-    }
-  }
 
   & > div{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: calc(100% - 476px);
-    margin: 0px 238px;
-    margin-top: 280px;
 
-    & > div:nth-child(1){
+    &:nth-child(1){
+      width: calc(100% - 464px);
+      margin: 0px 238px 0px 226px;
+      margin-top: 179px;
+    }
+
+    &:nth-child(2){
+      width: calc(100% - 476px);
+      margin: 0px 238px;
+      margin-top: 136px;
+
+      & > div{
+        margin-top: 124px;
+      }
+    }
+
+    & > :nth-child(1){
       & > h1{
         color: $white;
         text-align: left;
+        margin: 0px 0px 4px 0px;
       }
 
       & > p{
         color: $white;
         font-size: 20px;
         text-align: left;
-        margin-bottom: 0px;
+        margin: 0px;
       }
 
       & > div{
@@ -91,13 +79,50 @@ html{
           border: none;
         }
       }
+
+      &.mockup{
+        margin-left: -238px;
+        bottom: 95px;
+        left: 0px;
+        width: 920px;
+        height: 538px;
+      }
     }
 
-    & > div:nth-child(2){
-      z-index: 10 !important;
-      width: 244px;
-      height: 243px;
-      background-color: rgba(0, 0, 0, 0.2);
+    & > :nth-child(2){
+      & > h1{
+        font-size: 32px;
+        font-weight: 600;
+        text-align: right;
+        color: #303030;
+        margin: 0px;
+        margin-bottom: 5px;
+      }
+
+      & > p{
+        text-align: right;
+        font-size: 24px;
+        font-weight: 600;
+        margin: 0px;
+      }
+
+      & > div{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: 19px;
+        margin-bottom: 200px;
+
+        & > img{
+          width: 177px;
+          height: 53px;
+
+          &:last-child{
+            margin-left: 10px;
+          }
+        }
+      }
     }
   }
 }

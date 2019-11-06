@@ -8,7 +8,7 @@ const cx = classnames.bind(styles)
 class Mypage extends React.Component{
   render(){
     return(
-      <div>
+      <div className={cx('Mypage')}>
 
       </div>
     )

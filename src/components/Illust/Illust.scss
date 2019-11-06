@@ -1,0 +1,24 @@
+.Illust{
+  z-index: -1 !important;
+  & > img{
+    z-index: -1 !important;
+    &.illust_0{
+      z-index: inherit;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &.illust_1{
+      z-index: -2;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &.illust_3{
+      z-index: inherit;
+      position: absolute;
+      top: 1072px;
+      right: 0;
+    }
+  }
+}

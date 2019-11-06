@@ -8,7 +8,7 @@ const cx = classnames.bind(styles)
 class About extends React.Component{
   render(){
     return(
-      <div>
+      <div className={cx('About')}>
 
       </div>
     )
