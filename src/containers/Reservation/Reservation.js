@@ -88,10 +88,10 @@ class Reservation extends React.Component{
               <input type="text" className={cx('long')} placeholder="상세주소"/>
             </div>
           </div>
-          <hr className={cx('middle')} placeholder="배송요청사항"/>
+          <hr className={cx('middle')} />
           <div>
             <label>배송요청사항</label>
-            <input type="text" />
+            <input type="text" placeholder="배송요청사항"/>
           </div>
           <hr className={cx('end')}/>
           <h2>
