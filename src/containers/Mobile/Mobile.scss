@@ -1,9 +1,7 @@
-@import '../../styles/colors';
-
 .Mobile{
   width: 100vw;
   height: 100vh;
-  background: $main;
+  background: #5171ff;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -54,7 +52,7 @@
       font-weight: 600;
       color: #ffffff;
       margin-top: 35px;
-      border: 1px solid $main;
+      border: 1px solid #5171ff;
     }
   }
 }
