@@ -66,13 +66,27 @@ class Reservation extends React.Component{
             <label>
               예약번호 수신용 <br/> 전화번호
             </label>
-            <input type="text" />
+            <div>
+              <div>
+                <input type="text" />
+                <p>예약번호는 택배 발송시 꼭 필요하오니 잘 보관하여 주시기 바랍니다.</p>
+              </div>
+              <div>
+            <input type="checkbox" id="sameuser"/> <label htmlFor="sameuser"/> <div className={cx('sameuser')}> 보내는 분 휴대폰 번호와 동일 (예약번호 안내 메시지 발송 시에만 사용됩니다)</div>
+              </div>
+            </div>
           </div>
           <hr className={cx('middle')}/>
           <div>
             <label>주소</label>
-            <input type="text" className={cx('short')}/>
-            <button>주소 검색</button>
+            <div className={cx('address')}>
+              <div>
+                <input type="text" className={cx('short')}/>
+                <button>주소 검색</button>
+              </div>
+              <input type="text" className={cx('long')}/>
+              <input type="text" className={cx('long')} placeholder="상세주소"/>
+            </div>
           </div>
           <hr className={cx('middle')} placeholder="배송요청사항"/>
           <div>
@@ -105,12 +119,15 @@ class Reservation extends React.Component{
           </div>
           <hr className={cx('middle')}/>
           <div>
-            <label>
-              주소
-              <div className={cx('star')}>✱</div>
-            </label>
-            <input type="text" className={cx('short')}/>
-            <button>주소 검색</button>
+            <label>주소</label>
+            <div className={cx('address')}>
+              <div>
+                <input type="text" className={cx('short')}/>
+                <button>주소 검색</button>
+              </div>
+              <input type="text" className={cx('long')}/>
+              <input type="text" className={cx('long')} placeholder="상세주소"/>
+            </div>
           </div>
           <hr className={cx('middle')}/>
           <div>
