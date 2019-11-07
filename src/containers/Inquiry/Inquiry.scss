@@ -36,11 +36,37 @@
       margin-top: 80px;
     }
 
-    & > input{
-      width: 550px;
-      height: 55px;
-      border-radius: 10px;
-      border: solid 4px #5171ff;
+    & > div{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      & > input{
+        width: 510px;
+        height: 55px;
+        border-radius: 10px;
+        border: solid 4px #5171ff;
+        font-size: 16px;
+        font-weight: 600;
+        color: #555555;
+        padding: 0px 55px 0px 20px;
+      }
+
+      & > button{
+        background: transparent;
+        width: 30px;
+        height: 30px;
+        margin-left: -55px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border: none;
+
+        & > img{
+          width: 25px;
+          height: 25px;
+        }
+      }
     }
   }
 }
