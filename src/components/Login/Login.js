@@ -1,18 +1,57 @@
-import React from 'react'
-import * as classnames from 'classnames/bind'
+import React, { Component } from 'react'
+import Modal from 'react-modal'
+
+import * as classNames from 'classnames/bind'
 
 import styles from './Login.scss'
 
-const cx = classnames.bind(styles)
+const cx = classNames.bind(styles)
+ 
+const customStyles = {
+    content : {
+        top : '50%',
+        left : '50%',
+        right : 'auto',
+        bottom : 'auto',
+        marginRight : '-50%',
+        transform: 'translate(-50%, -50%)',
+        border: '0px solid #000',
+        width: 'calc(78vw - 60px)',
+        height: '100vh',
+        background: 'rgba(255, 255, 255, 0.5)',
+        paddingTop: '150px'
+    }
+};
 
-class Login extends React.Component{
-  render(){
-    return(
-      <div className={cx('Login')}>
-        Login
-      </div>
-    )
-  }
+class Login extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            showModal: false
+        };
+        
+        this.handleCloseModal = this.handleCloseModal.bind(this);
+    }
+    
+    componentWillReceiveProps() {
+        this.setState({
+            showModal: this.props.showModal,
+            modalInfo: this.props.modalInfo
+        });
+    }
+    
+    handleCloseModal() {
+        this.setState({ showModal: false });
+    }
+
+    render() {        
+        return (
+            <Modal isOpen={this.state.showModal} style={customStyles} ariaHideApp={false}>
+                <div className={cx('Login')}>
+                </div>
+            </Modal>
+        )
+    }
 }
 
 export default Login

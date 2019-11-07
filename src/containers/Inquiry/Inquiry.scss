@@ -8,10 +8,7 @@
   overflow-x: hidden;
   -ms-overflow-style: none;
   -webkit-overflow-scrolling: none !important;
-  &::-webkit-scrollbar { 
-    display: none !important;
-  }
-
+  
   & > div{
     display: flex;
     flex-direction: column;

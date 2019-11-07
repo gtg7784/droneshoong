@@ -42,8 +42,8 @@ class Header extends React.Component{
     const { pathname } = this.props
     return(
       <React.Fragment>
-        {isLogin ? <Login /> : null}
-        {isRegister ? <Register /> : null}
+        <Login showModal={isLogin} />
+        <Register showModal={isRegister}/>
         <header className={cx('header')} style={pathname === "/" ? {backgroundColor: "transparent"} : {backgroundColor: "#5270ff"}}>
           <Link to='/'>
             <img src={logo} alt=""/>
