@@ -23,6 +23,7 @@ class Inquiry extends React.Component{
               <img src={i_search} alt=""/>
             </button>
           </div>
+          <hr/>
         </div>
       </div>
     )

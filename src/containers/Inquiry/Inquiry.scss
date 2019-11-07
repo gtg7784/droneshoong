@@ -27,21 +27,22 @@
     & > img{
       width: 195px;
       height: 160px;
-      margin-top: 80px;
+      margin-top: 60px;
     }
 
     & > p{
-      font-size: 24px;
+      font-size: 22px;
       font-weight: 600;
-      margin-top: 80px;
+      margin-top: 60px;
     }
 
     & > div{
       display: flex;
       flex-direction: row;
+      margin-top: 30px;
       align-items: center;
       & > input{
-        width: 510px;
+        width: 450px;
         height: 55px;
         border-radius: 10px;
         border: solid 4px #5171ff;

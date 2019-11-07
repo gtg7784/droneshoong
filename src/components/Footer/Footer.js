@@ -11,7 +11,7 @@ const cx = classNames.bind(styles)
 class Footer extends React.Component{
   render(){
     return(
-      <footer className={cx('footer')}>
+      <div className={cx('footer')}>
         <div>
           <div>
             <ul>
@@ -42,7 +42,7 @@ class Footer extends React.Component{
           </div>
           <img src={logo_black} alt=""/>
         </div>
-      </footer>
+      </div>
     )
   }
 }
