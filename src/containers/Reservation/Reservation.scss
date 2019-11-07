@@ -65,11 +65,18 @@
       padding: 19px 0px 20px 0px;
 
       & > label{
+        display: flex;
+        flex-direction: row;
         font-size: 24px;
         font-weight: 600;
         color: #303030;
         width: 194px;
         text-align: left;
+
+        & > .star{
+          margin-left: 4px;
+          color: #ff8e6b;        
+        }
       }
 
       & > input[type=text]{

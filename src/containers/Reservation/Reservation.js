@@ -89,23 +89,35 @@ class Reservation extends React.Component{
           </h2>
           <hr className={cx('start')}/>
           <div>
-            <label>이름</label>
+            <label>
+              이름
+              <div className={cx('star')}>✱</div>
+            </label>
             <input type="text" placeholder="이름" className={cx('short')}/>
           </div>
           <hr className={cx('middle')}/>
           <div>
-            <label>전화번호</label>
+            <label>
+              전화번호
+              <div className={cx('star')}>✱</div>
+            </label>
             <input type="text" />
           </div>
           <hr className={cx('middle')}/>
           <div>
-            <label>주소</label>
+            <label>
+              주소
+              <div className={cx('star')}>✱</div>
+            </label>
             <input type="text" className={cx('short')}/>
             <button>주소 검색</button>
           </div>
           <hr className={cx('middle')}/>
           <div>
-            <label>지불방법 ✱</label>
+            <label>
+              지불방법
+              <div className={cx('star')}>✱</div>
+            </label>
             <select>
               <option value="">지불방법</option>
               <option value="prepaid">선불</option>
