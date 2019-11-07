@@ -1,6 +1,6 @@
 @import '../../styles/colors';
 
-header{
+.header{
   position: fixed;
   z-index: 1000;
   width: calc(100vw - 300px);
@@ -10,11 +10,11 @@ header{
   justify-content: space-between;
   padding: 0 150px;
   top: 0;
-  background-color: $main;
-  z-index: 100;
+  // background-color: $main;
+  z-index: 1000;
+
   & > a{
     text-decoration: none;
-
     & > img{
       width: 100x;
     }

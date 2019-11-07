@@ -39,33 +39,34 @@ class Header extends React.Component{
 
   render(){
     const { isLogin, isRegister } = this.state;
+    const { pathname } = this.props
     return(
       <React.Fragment>
         {isLogin ? <Login /> : null}
         {isRegister ? <Register /> : null}
-        <header className={cx('header')}>
+        <header className={cx('header')} style={pathname === "/" ? {backgroundColor: "transparent"} : {backgroundColor: "#5270ff"}}>
           <Link to='/'>
             <img src={logo} alt=""/>
           </Link>
           <div>
             <ul>
               <li>
-                <Link to='/about'>서비스 소개</Link>
+                <Link to='/' style={pathname === "/" ? {color: "#303030"} : {color: "#ffffff"}}>서비스 소개</Link>
               </li>
               <li>
-                <Link to='/reservation'>택배 예약</Link>
+                <Link to='/reservation' style={pathname === "/" ? {color: "#303030"} : {color: "#ffffff"}}>택배 예약</Link>
               </li>
               <li>
-                <Link to='/inquiry'>택배 조회</Link>
+                <Link to='/inquiry' style={pathname === "/" ? {color: "#303030"} : {color: "#ffffff"}}>택배 조회</Link>
               </li>
               <li>
-                <Link to='/mypage'>회원정보</Link>
+                <Link to='/mypage' style={pathname === "/" ? {color: "#303030"} : {color: "#ffffff"}}>회원정보</Link>
               </li>
             </ul>
             <div>
-                <Link onClick={() => this.onLogin()}>로그인 </Link>
-                <div/>
-                <Link onClick={() => this.onRegister()}>회원가입</Link>
+                <Link onClick={() => this.onLogin()} style={pathname === "/" ? {color: "#000000"} : {color: "#ffffff"}}>로그인 </Link>
+                <div style={pathname === "/" ? {backgroundColor: "#303030"} : {backgroundColor: "#ffffff"}} />
+                <Link onClick={() => this.onRegister()} style={pathname === "/" ? {color: "#303030"} : {color: "#ffffff"}}>회원가입</Link>
             </div>
           </div>
         </header>
