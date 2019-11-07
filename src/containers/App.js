@@ -13,6 +13,7 @@ import Reservation from './Reservation/Reservation';
 import Inquiry from './Inquiry/Inquiry';
 import Mypage from './Mypage/Mypage';
 import Mobile from './Mobile/Mobile';
+import Notfound from './Notfound/Notfound'
 
 const cx = classNames.bind(styles)
 
@@ -45,6 +46,7 @@ class App extends React.Component {
                 <Route path='/reservation' exact component={Reservation}/>
                 <Route path='/inquiry' exact component={Inquiry}/>
                 <Route path='/mypage' exact component={Mypage}/>
+                <Route component={Notfound}/>
               </Switch>
               <Footer />
             </React.Fragment>
