@@ -33,12 +33,19 @@ class Register extends Component {
             next: false
         };
 
+        this.onNext = this.onNext.bind(this)
     }
     
     componentWillReceiveProps() {
         this.setState({
             showModal: this.props.showModal
         });
+    }
+
+    onNext = () => {
+        this.setState({
+            next: true
+        })
     }
 
     render() {   
@@ -53,18 +60,42 @@ class Register extends Component {
                             <label htmlFor="">이메일</label>
                             <input type="text"/>
                             <label htmlFor="">생년월일</label>
-                            <input type="text"/>'
+                            <input type="text"/>
                         </div>
                         <div>
                             <label htmlFor="">이메일</label>
                             <input type="text"/>
                             <label htmlFor="">생년월일</label>
-                            <input type="text"/>'
+                            <input type="text"/>
                         </div>
                     </div>
-                    <button>다음 단계</button>
+                    <button onClick={() => this.onNext()}>다음 단계</button>
                 </div>
                 <div className={cx('Register2')} style={next ? {display: "flex" } : {display: "none"}}>
+                    <img src={logo} alt=""/>
+                    <p>드론으로 슝에 오신 것을 환영합니다. </p>
+                    <div>
+                        <div>
+                            <label htmlFor="">아이디</label>
+                            <input type="text"/>
+                            <label htmlFor="">비밀번호</label>
+                            <input type="password"/>
+                            <label htmlFor="">비밀번호 확인</label>
+                            <input type="password"/>
+                        </div>
+                        <div>
+                            <label htmlFor="">주소</label>
+                            <div>
+                                <div>
+                                    <input type="text"/>
+                                    <button>주소검색</button>
+                                </div>
+                                <input type="text"/>
+                                <input type="text" placeholder="상세 주소"/>
+                            </div>
+                        </div>
+                    </div>
+                    <button onClick={() => this.onNext()}>가입하기</button>
                 </div>
             </Modal>
         )
