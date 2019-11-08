@@ -12,6 +12,9 @@ class Lookup extends React.Component{
         <h1>택배조회</h1>
         <hr className={cx('start')}/>
         <p>상품 상태 확인</p>
+        <div>
+          
+        </div>
       </div>
     )
   }

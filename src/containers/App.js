@@ -1,6 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom'
 import { isMobile } from 'react-device-detect'
+import axios from 'axios'
 import * as classNames from 'classnames/bind'
 
 import styles from './App.scss';
@@ -24,6 +25,9 @@ class App extends React.Component {
     this.state = {
       pathname: '/'
     }
+    axios.defaults.baseURL = 'http://ec2-3-132-214-132.us-east-2.compute.amazonaws.com/api';
+    axios.defaults.timeout = 10000;
+    axios.defaults.headers.common['Accept'] = '*/*';
   }
 
   componentDidMount(){
