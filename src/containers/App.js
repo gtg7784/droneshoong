@@ -11,6 +11,7 @@ import Footer from '../components/Footer/Footer';
 import Main from './Main/Main';
 import Reservation from './Reservation/Reservation';
 import Inquiry from './Inquiry/Inquiry';
+import Lookup from './Lookup/Lookup'
 import Mypage from './Mypage/Mypage';
 import Mobile from './Mobile/Mobile';
 import Notfound from './Notfound/Notfound'
@@ -45,6 +46,7 @@ class App extends React.Component {
                 <Route path='/' exact component={Main}/>
                 <Route path='/reservation' exact component={Reservation}/>
                 <Route path='/inquiry' exact component={Inquiry}/>
+                <Route path='/lookup' exact component={Lookup}/>
                 <Route path='/mypage' exact component={Mypage}/>
                 <Route component={Notfound}/>
               </Switch>

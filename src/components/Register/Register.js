@@ -32,20 +32,12 @@ class Register extends Component {
             showModal: false,
             next: false
         };
-
-        this.onNext = this.onNext.bind(this)
     }
     
     componentWillReceiveProps() {
         this.setState({
             showModal: this.props.showModal
         });
-    }
-
-    onNext = () => {
-        this.setState({
-            next: true
-        })
     }
 
     render() {   
@@ -95,7 +87,7 @@ class Register extends Component {
                             </div>
                         </div>
                     </div>
-                    <button onClick={() => this.onNext()}>가입하기</button>
+                    <button>가입하기</button>
                 </div>
             </Modal>
         )

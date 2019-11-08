@@ -1,0 +1,32 @@
+.Lookup{
+  display: flex;
+  flex-direction: column;
+  padding: 0px 222px;
+  & > h1{
+    color: #303030;
+    margin-top: 164px;
+    margin-bottom: 0px;
+  }
+
+  & > hr{
+    margin: 0px;
+    &.start{
+      width: calc(100% - 4px) !important;
+      border: solid 2px #5171ff;
+      margin-top: 80px;
+    }
+  }
+
+  & > p{
+    font-size: 24px;
+    font-weight: 600;
+    color: #303030;
+    text-align: left;  
+    margin-top: 13px;
+    margin-bottom: 0px;
+  }
+
+  & > div{
+    
+  }
+}
