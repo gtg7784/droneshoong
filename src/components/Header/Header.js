@@ -26,7 +26,8 @@ class Header extends React.Component{
   onLogin = () => {
     const { isLogin } = this.state;
     this.setState({
-      isLogin: !isLogin
+      isLogin: true,
+      isRegister: false
     })
     console.log(isLogin)
   }
@@ -34,7 +35,8 @@ class Header extends React.Component{
   onRegister = () => {
     const { isRegister } = this.state;
     this.setState({
-      isRegister: !isRegister
+      isRegister: true,
+      isLogin: false
     })
     console.log(isRegister)
   }
@@ -44,7 +46,7 @@ class Header extends React.Component{
     const { pathname } = this.props
     return(
       <React.Fragment>
-        <Login showModal={isLogin} />
+        <Login showModal={isLogin} onRegister={this.onRegister}/>
         <Register showModal={isRegister}/>
         <header className={cx('header')} style={pathname === "/" ? {backgroundColor: "transparent"} : {backgroundColor: "#5270ff"}}>
           <Link to='/'>

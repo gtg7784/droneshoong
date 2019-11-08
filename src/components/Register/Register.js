@@ -5,6 +5,8 @@ import * as classNames from 'classnames/bind'
 
 import styles from './Register.scss'
 
+import logo from 'assets/logo_black.svg'
+
 const cx = classNames.bind(styles)
  
 const customStyles = {
@@ -27,27 +29,42 @@ class Register extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            showModal: false
+            showModal: false,
+            next: false
         };
-        
-        this.handleCloseModal = this.handleCloseModal.bind(this);
+
     }
     
     componentWillReceiveProps() {
         this.setState({
-            showModal: this.props.showModal,
-            modalInfo: this.props.modalInfo
+            showModal: this.props.showModal
         });
     }
-    
-    handleCloseModal() {
-        this.setState({ showModal: false });
-    }
 
-    render() {        
+    render() {   
+        const { next } = this.state;     
         return (
             <Modal isOpen={this.state.showModal} style={customStyles} ariaHideApp={false}>
-                <div className={cx('Register')}>
+                <div className={cx('Register1')} style={next ? {display: "none" } : {display: "flex"}}>
+                    <img src={logo} alt=""/>
+                    <p>드론으로 슝에 오신 것을 환영합니다. </p>
+                    <div>
+                        <div>
+                            <label htmlFor="">이메일</label>
+                            <input type="text"/>
+                            <label htmlFor="">생년월일</label>
+                            <input type="text"/>'
+                        </div>
+                        <div>
+                            <label htmlFor="">이메일</label>
+                            <input type="text"/>
+                            <label htmlFor="">생년월일</label>
+                            <input type="text"/>'
+                        </div>
+                    </div>
+                    <button>다음 단계</button>
+                </div>
+                <div className={cx('Register2')} style={next ? {display: "flex" } : {display: "none"}}>
                 </div>
             </Modal>
         )

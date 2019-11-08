@@ -31,19 +31,12 @@ class Login extends Component {
         this.state = {
             showModal: false
         };
-        
-        this.handleCloseModal = this.handleCloseModal.bind(this);
     }
     
     componentWillReceiveProps() {
         this.setState({
-            showModal: this.props.showModal,
-            modalInfo: this.props.modalInfo
+            showModal: this.props.showModal
         });
-    }
-    
-    handleCloseModal() {
-        this.setState({ showModal: false });
     }
 
     render() {        
@@ -58,7 +51,7 @@ class Login extends Component {
                     <button>로그인</button>
                     <p>
                         아직 드론으로 슝을 사용하고 있지 않으신가요? 
-                        <button>가입하기</button>
+                        <button onClick={this.props.onRegister}>가입하기</button>
                     </p>
                 </div>
             </Modal>
