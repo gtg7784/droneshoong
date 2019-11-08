@@ -18,7 +18,7 @@ const customStyles = {
         border: '0px solid #000',
         width: 'calc(78vw - 60px)',
         height: '100vh',
-        background: 'rgba(255, 255, 255, 0.5)',
+        background: 'rgba(0, 0, 0, 0.3)',
         paddingTop: '150px'
     }
 };

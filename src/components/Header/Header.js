@@ -4,10 +4,10 @@ import * as classNames from 'classnames/bind'
 
 import styles from './Header.scss'
 
-import Login from '../../components/Login/Login'
-import Register from '../../components/Register/Register'
+import Login from 'components/Login/Login'
+import Register from 'components/Register/Register'
 
-import logo from '../../assets/logo.svg'
+import logo from 'assets/logo.svg'
 
 const cx = classNames.bind(styles)
 
@@ -24,10 +24,11 @@ class Header extends React.Component{
   }
 
   onLogin = () => {
-    const { onLogin } = this.state;
+    const { isLogin } = this.state;
     this.setState({
-      isLogin: !onLogin
+      isLogin: !isLogin
     })
+    console.log(isLogin)
   }
 
   onRegister = () => {
@@ -35,6 +36,7 @@ class Header extends React.Component{
     this.setState({
       isRegister: !isRegister
     })
+    console.log(isRegister)
   }
 
   render(){
