@@ -55,10 +55,10 @@ class Register extends Component {
                             <input type="text"/>
                         </div>
                         <div>
-                            <label htmlFor="">이메일</label>
+                            <label htmlFor="">성별</label>
                             <input type="text"/>
-                            <label htmlFor="">생년월일</label>
-                            <input type="text"/>
+                            <label htmlFor="">전화번호</label>
+                            <input type="text" placeholder="01012345678"/> 
                         </div>
                     </div>
                     <button onClick={() => this.onNext()}>다음 단계</button>

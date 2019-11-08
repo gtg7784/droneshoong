@@ -52,29 +52,31 @@ class Login extends Component {
       }
 
       onLogin = async () => {
-        let form = new FormData()
-        form.append('username', this.state.id)
-        form.append('password', this.state.pw)
+        window.location.replace('/')
+        
+        // let form = new FormData()
+        // form.append('username', this.state.id)
+        // form.append('password', this.state.pw)
     
-        await axios.post('/signin/', form)
-        .catch(err => {
-          console.log(err.response.data);
-          alert('아이디 또는 비밀번호가 잘못되었습니다.')
-        })
-        .then(res => {
-          console.log(res)
-          if(res && res.status === 200){
-            sessionStorage.setItem(
-              "userInfo",
-              JSON.stringify({
-                username: this.state.id,
-                password: this.state.pw,
-                token: res.data.token
-              })
-            )
-            window.location.replace('/')
-          }
-        })
+        // await axios.post('/signin/', form)
+        // .catch(err => {
+        //   console.log(err.response.data);
+        //   alert('아이디 또는 비밀번호가 잘못되었습니다.')
+        // })
+        // .then(res => {
+        //   console.log(res)
+        //   if(res && res.status === 200){
+        //     sessionStorage.setItem(
+        //       "userInfo",
+        //       JSON.stringify({
+        //         username: this.state.id,
+        //         password: this.state.pw,
+        //         token: res.data.token
+        //       })
+        //     )
+        //     window.location.replace('/')
+        //   }
+        // })
       }
     
     componentWillReceiveProps() {
