@@ -37,6 +37,7 @@ class Login extends Component {
         this.onChangeId = this.onChangeId.bind(this)
         this.onChangePw = this.onChangePw.bind(this)
         this.onLogin = this.onLogin.bind(this)
+        this.onClose = this.onClose.bind(this)
       }
     
       onChangeId = (e) => {
@@ -85,10 +86,18 @@ class Login extends Component {
         });
     }
 
+    onClose = async () => {
+      window.location.reload('/')
+    }
+
     render() {        
         return (
             <Modal isOpen={this.state.showModal} style={customStyles} ariaHideApp={false}>
-                <div className={cx('Login')}>
+                <div className={cx('Login')} onClick={() => this.onClose()}>
+                    <div>
+                      <div/>
+                      <button className={cx('close')}>close</button>
+                    </div>
                     <img src={logo} alt=""/>
                     <h3>드론으로 슝에 오신 것을 환영합니다.</h3>
                     <input type="text" placeholder="아이디" onChange={(e) => this.onChangeId(e)}/>
